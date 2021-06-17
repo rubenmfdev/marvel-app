@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         // Create the view hierarchy
-        let viewController = ViewController()
+        let viewController = MarvelListViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         
         // Set the root view controller of the window with the view controller

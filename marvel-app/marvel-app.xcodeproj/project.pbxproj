@@ -10,7 +10,6 @@
 		7D610B74B445901BB2DC1126 /* Pods_marvel_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83C2CA63BBFEBBF79AB88A1 /* Pods_marvel_app.framework */; };
 		DB13DD802679003D00B0C246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13DD7F2679003D00B0C246 /* AppDelegate.swift */; };
 		DB13DD822679003D00B0C246 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13DD812679003D00B0C246 /* SceneDelegate.swift */; };
-		DB13DD842679003D00B0C246 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13DD832679003D00B0C246 /* ViewController.swift */; };
 		DB13DD892679003F00B0C246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB13DD882679003F00B0C246 /* Assets.xcassets */; };
 		DB13DD8C2679003F00B0C246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB13DD8A2679003F00B0C246 /* LaunchScreen.storyboard */; };
 		DB13DD972679003F00B0C246 /* marvel_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13DD962679003F00B0C246 /* marvel_appTests.swift */; };
@@ -42,6 +41,30 @@
 		DB13DE8026790BC600B0C246 /* UrlEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13DE7326790BC600B0C246 /* UrlEntity.swift */; };
 		DB13DE8126790BC600B0C246 /* StoryListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13DE7426790BC600B0C246 /* StoryListEntity.swift */; };
 		DB13DE8226790BC600B0C246 /* CharacterDataWrapperEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB13DE7526790BC600B0C246 /* CharacterDataWrapperEntity.swift */; };
+		DB6FD269267A956E00361838 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD268267A956E00361838 /* BaseRouter.swift */; };
+		DB6FD272267A95AE00361838 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD271267A95AE00361838 /* HTTPStatusCode.swift */; };
+		DB6FD27A267A967300361838 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD279267A967300361838 /* NetworkManager.swift */; };
+		DB6FD28F267A9BB800361838 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD28E267A9BB800361838 /* NetworkError.swift */; };
+		DB6FD297267A9CA100361838 /* CharactersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD296267A9CA100361838 /* CharactersRouter.swift */; };
+		DB6FD29C267A9EAA00361838 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD29B267A9EAA00361838 /* Constants.swift */; };
+		DB6FD2A1267A9EF100361838 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB6FD2A0267A9EF100361838 /* Config.plist */; };
+		DB6FD2A6267A9F6E00361838 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD2A5267A9F6E00361838 /* Configuration.swift */; };
+		DB6FD2AB267AA13700361838 /* CharactersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD2AA267AA13700361838 /* CharactersDataSource.swift */; };
+		DBE689B6267B256100F4024E /* CharactersNetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689B5267B256100F4024E /* CharactersNetworkDataSource.swift */; };
+		DBE689BC267B25E100F4024E /* CharacterFilterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689BB267B25E100F4024E /* CharacterFilterEntity.swift */; };
+		DBE689C1267B28E700F4024E /* CharactersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689C0267B28E700F4024E /* CharactersRepository.swift */; };
+		DBE689C6267B291900F4024E /* CharactersDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689C5267B291900F4024E /* CharactersDataRepository.swift */; };
+		DBE689CB267B2AA100F4024E /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689CA267B2AA100F4024E /* DomainError.swift */; };
+		DBE689D0267B2AF100F4024E /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689CF267B2AF100F4024E /* DataError.swift */; };
+		DBE689D9267B2BF300F4024E /* GetCharactersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689D8267B2BF300F4024E /* GetCharactersUseCase.swift */; };
+		DBE689DF267B4F8800F4024E /* MarvelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689DD267B4F8800F4024E /* MarvelListViewController.swift */; };
+		DBE689E0267B4F8800F4024E /* MarvelListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE689DE267B4F8800F4024E /* MarvelListViewController.xib */; };
+		DBE689E5267B4F9600F4024E /* MarvelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689E4267B4F9600F4024E /* MarvelListViewModel.swift */; };
+		DBE689EA267B4FA600F4024E /* MarvelListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689E9267B4FA600F4024E /* MarvelListCoordinator.swift */; };
+		DBE689EF267B54D200F4024E /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689EE267B54D200F4024E /* Dictionary.swift */; };
+		DBE689F7267B60E300F4024E /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689F6267B60E300F4024E /* String+Crypto.swift */; };
+		DBE689FC267B658000F4024E /* String+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689FB267B658000F4024E /* String+Json.swift */; };
+		DBE68A01267B6C3B00F4024E /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE68A00267B6C3B00F4024E /* String+Localizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +91,6 @@
 		DB13DD7C2679003D00B0C246 /* marvel-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB13DD7F2679003D00B0C246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB13DD812679003D00B0C246 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB13DD832679003D00B0C246 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB13DD882679003F00B0C246 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB13DD8B2679003F00B0C246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB13DD8D2679003F00B0C246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +130,30 @@
 		DB13DE7326790BC600B0C246 /* UrlEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlEntity.swift; sourceTree = "<group>"; };
 		DB13DE7426790BC600B0C246 /* StoryListEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryListEntity.swift; sourceTree = "<group>"; };
 		DB13DE7526790BC600B0C246 /* CharacterDataWrapperEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDataWrapperEntity.swift; sourceTree = "<group>"; };
+		DB6FD268267A956E00361838 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		DB6FD271267A95AE00361838 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		DB6FD279267A967300361838 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DB6FD28E267A9BB800361838 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DB6FD296267A9CA100361838 /* CharactersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRouter.swift; sourceTree = "<group>"; };
+		DB6FD29B267A9EAA00361838 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB6FD2A0267A9EF100361838 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		DB6FD2A5267A9F6E00361838 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DB6FD2AA267AA13700361838 /* CharactersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataSource.swift; sourceTree = "<group>"; };
+		DBE689B5267B256100F4024E /* CharactersNetworkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersNetworkDataSource.swift; sourceTree = "<group>"; };
+		DBE689BB267B25E100F4024E /* CharacterFilterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilterEntity.swift; sourceTree = "<group>"; };
+		DBE689C0267B28E700F4024E /* CharactersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepository.swift; sourceTree = "<group>"; };
+		DBE689C5267B291900F4024E /* CharactersDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataRepository.swift; sourceTree = "<group>"; };
+		DBE689CA267B2AA100F4024E /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		DBE689CF267B2AF100F4024E /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		DBE689D8267B2BF300F4024E /* GetCharactersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersUseCase.swift; sourceTree = "<group>"; };
+		DBE689DD267B4F8800F4024E /* MarvelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelListViewController.swift; sourceTree = "<group>"; };
+		DBE689DE267B4F8800F4024E /* MarvelListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarvelListViewController.xib; sourceTree = "<group>"; };
+		DBE689E4267B4F9600F4024E /* MarvelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelListViewModel.swift; sourceTree = "<group>"; };
+		DBE689E9267B4FA600F4024E /* MarvelListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelListCoordinator.swift; sourceTree = "<group>"; };
+		DBE689EE267B54D200F4024E /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		DBE689F6267B60E300F4024E /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
+		DBE689FB267B658000F4024E /* String+Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Json.swift"; sourceTree = "<group>"; };
+		DBE68A00267B6C3B00F4024E /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +278,6 @@
 		DB13DDC22679036800B0C246 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DB13DD832679003D00B0C246 /* ViewController.swift */,
 				DB13DDD12679045700B0C246 /* MarvelDetail */,
 				DB13DDD02679044A00B0C246 /* MarvelList */,
 			);
@@ -242,8 +287,12 @@
 		DB13DDC32679037300B0C246 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DBE689D4267B2AFC00F4024E /* Errors */,
+				DB6FD270267A959800361838 /* Network */,
 				DB13DDD32679047D00B0C246 /* Views */,
 				DB13DDD22679047100B0C246 /* Extensions */,
+				DB6FD29B267A9EAA00361838 /* Constants.swift */,
+				DB6FD2A5267A9F6E00361838 /* Configuration.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -252,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				DB13DD8D2679003F00B0C246 /* Info.plist */,
+				DB6FD2A0267A9EF100361838 /* Config.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -276,6 +326,7 @@
 		DB13DDC7267903B900B0C246 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				DB6FD2AA267AA13700361838 /* CharactersDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -283,6 +334,7 @@
 		DB13DDC8267903C000B0C246 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DBE689C5267B291900F4024E /* CharactersDataRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -300,6 +352,7 @@
 		DB13DDCA267903E100B0C246 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				DBE689B5267B256100F4024E /* CharactersNetworkDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -307,6 +360,7 @@
 		DB13DDCB267903E900B0C246 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				DB6FD296267A9CA100361838 /* CharactersRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -334,6 +388,7 @@
 		DB13DDCD2679040500B0C246 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DBE689C0267B28E700F4024E /* CharactersRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -341,6 +396,7 @@
 		DB13DDCE2679040B00B0C246 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DBE689BA267B25CE00F4024E /* Filters */,
 				DB13DE6E26790BC500B0C246 /* CharacterDataContainerEntity.swift */,
 				DB13DE7526790BC600B0C246 /* CharacterDataWrapperEntity.swift */,
 				DB13DE6C26790BC500B0C246 /* CharacterEntity.swift */,
@@ -361,6 +417,7 @@
 		DB13DDCF2679041000B0C246 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DBE689D8267B2BF300F4024E /* GetCharactersUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -368,6 +425,10 @@
 		DB13DDD02679044A00B0C246 /* MarvelList */ = {
 			isa = PBXGroup;
 			children = (
+				DBE689DD267B4F8800F4024E /* MarvelListViewController.swift */,
+				DBE689DE267B4F8800F4024E /* MarvelListViewController.xib */,
+				DBE689E4267B4F9600F4024E /* MarvelListViewModel.swift */,
+				DBE689E9267B4FA600F4024E /* MarvelListCoordinator.swift */,
 			);
 			path = MarvelList;
 			sourceTree = "<group>";
@@ -382,6 +443,10 @@
 		DB13DDD22679047100B0C246 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DBE689EE267B54D200F4024E /* Dictionary.swift */,
+				DBE689F6267B60E300F4024E /* String+Crypto.swift */,
+				DBE689FB267B658000F4024E /* String+Json.swift */,
+				DBE68A00267B6C3B00F4024E /* String+Localizable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +456,34 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DB6FD270267A959800361838 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FD268267A956E00361838 /* BaseRouter.swift */,
+				DB6FD271267A95AE00361838 /* HTTPStatusCode.swift */,
+				DB6FD279267A967300361838 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DBE689BA267B25CE00F4024E /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				DBE689BB267B25E100F4024E /* CharacterFilterEntity.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		DBE689D4267B2AFC00F4024E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				DBE689CF267B2AF100F4024E /* DataError.swift */,
+				DBE689CA267B2AA100F4024E /* DomainError.swift */,
+				DB6FD28E267A9BB800361838 /* NetworkError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,7 +594,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6FD2A1267A9EF100361838 /* Config.plist in Resources */,
 				DB13DD8C2679003F00B0C246 /* LaunchScreen.storyboard in Resources */,
+				DBE689E0267B4F8800F4024E /* MarvelListViewController.xib in Resources */,
 				DB13DDF92679093F00B0C246 /* Localizable.strings in Resources */,
 				DB13DD892679003F00B0C246 /* Assets.xcassets in Resources */,
 			);
@@ -571,34 +666,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB13DE2526790B0000B0C246 /* StoryListDTO.swift in Sources */,
+				DBE689E5267B4F9600F4024E /* MarvelListViewModel.swift in Sources */,
 				DB13DE7D26790BC600B0C246 /* ImageEntity.swift in Sources */,
 				DB13DE7726790BC600B0C246 /* ComicListEntity.swift in Sources */,
-				DB13DD842679003D00B0C246 /* ViewController.swift in Sources */,
 				DB13DE7F26790BC600B0C246 /* ComicSummaryEntity.swift in Sources */,
 				DB13DE1B26790AE600B0C246 /* ComicListDTO.swift in Sources */,
 				DB13DE7826790BC600B0C246 /* EventListEntity.swift in Sources */,
+				DB6FD269267A956E00361838 /* BaseRouter.swift in Sources */,
+				DBE68A01267B6C3B00F4024E /* String+Localizable.swift in Sources */,
+				DB6FD28F267A9BB800361838 /* NetworkError.swift in Sources */,
 				DB13DE7B26790BC600B0C246 /* CharacterDataContainerEntity.swift in Sources */,
+				DBE689D9267B2BF300F4024E /* GetCharactersUseCase.swift in Sources */,
 				DB13DE7E26790BC600B0C246 /* SeriesListEntity.swift in Sources */,
 				DB13DE1626790ADC00B0C246 /* ImageDTO.swift in Sources */,
 				DB13DE2A26790B0800B0C246 /* StorySummaryDTO.swift in Sources */,
+				DBE689B6267B256100F4024E /* CharactersNetworkDataSource.swift in Sources */,
 				DB13DE7926790BC600B0C246 /* CharacterEntity.swift in Sources */,
+				DBE689EF267B54D200F4024E /* Dictionary.swift in Sources */,
 				DB13DDFE26790A9F00B0C246 /* CharacterDataWrapperDTO.swift in Sources */,
 				DB13DE8026790BC600B0C246 /* UrlEntity.swift in Sources */,
+				DBE689DF267B4F8800F4024E /* MarvelListViewController.swift in Sources */,
 				DB13DE7C26790BC600B0C246 /* EventSummaryEntity.swift in Sources */,
 				DB13DE0E26790AD000B0C246 /* UrlDTO.swift in Sources */,
 				DB13DE3E26790B2B00B0C246 /* SeriesSummaryDTO.swift in Sources */,
 				DB13DE2F26790B1200B0C246 /* EventListDTO.swift in Sources */,
+				DBE689C1267B28E700F4024E /* CharactersRepository.swift in Sources */,
 				DB13DD802679003D00B0C246 /* AppDelegate.swift in Sources */,
+				DB6FD27A267A967300361838 /* NetworkManager.swift in Sources */,
 				DB13DE0826790AC200B0C246 /* CharacterDTO.swift in Sources */,
 				DB13DE8226790BC600B0C246 /* CharacterDataWrapperEntity.swift in Sources */,
+				DBE689C6267B291900F4024E /* CharactersDataRepository.swift in Sources */,
+				DB6FD272267A95AE00361838 /* HTTPStatusCode.swift in Sources */,
+				DB6FD29C267A9EAA00361838 /* Constants.swift in Sources */,
+				DB6FD2AB267AA13700361838 /* CharactersDataSource.swift in Sources */,
+				DBE689F7267B60E300F4024E /* String+Crypto.swift in Sources */,
 				DB13DD822679003D00B0C246 /* SceneDelegate.swift in Sources */,
+				DB6FD297267A9CA100361838 /* CharactersRouter.swift in Sources */,
 				DB13DE2026790AF400B0C246 /* ComicSummaryDTO.swift in Sources */,
+				DBE689D0267B2AF100F4024E /* DataError.swift in Sources */,
 				DB13DE7A26790BC600B0C246 /* SeriesSummaryEntity.swift in Sources */,
+				DB6FD2A6267A9F6E00361838 /* Configuration.swift in Sources */,
 				DB13DE8126790BC600B0C246 /* StoryListEntity.swift in Sources */,
 				DB13DE3926790B2500B0C246 /* SeriesListDTO.swift in Sources */,
+				DBE689EA267B4FA600F4024E /* MarvelListCoordinator.swift in Sources */,
 				DB13DE7626790BC600B0C246 /* StorySummaryEntity.swift in Sources */,
 				DB13DE0326790AAD00B0C246 /* CharacterDataContainerDTO.swift in Sources */,
 				DB13DE3426790B1B00B0C246 /* EventSummaryDTO.swift in Sources */,
+				DBE689CB267B2AA100F4024E /* DomainError.swift in Sources */,
+				DBE689FC267B658000F4024E /* String+Json.swift in Sources */,
+				DBE689BC267B25E100F4024E /* CharacterFilterEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
