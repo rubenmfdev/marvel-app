@@ -65,6 +65,7 @@
 		DBE689F7267B60E300F4024E /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689F6267B60E300F4024E /* String+Crypto.swift */; };
 		DBE689FC267B658000F4024E /* String+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE689FB267B658000F4024E /* String+Json.swift */; };
 		DBE68A01267B6C3B00F4024E /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE68A00267B6C3B00F4024E /* String+Localizable.swift */; };
+		DBE68A09267BE67900F4024E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE68A08267BE67900F4024E /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		DBE689F6267B60E300F4024E /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
 		DBE689FB267B658000F4024E /* String+Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Json.swift"; sourceTree = "<group>"; };
 		DBE68A00267B6C3B00F4024E /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		DBE68A08267BE67900F4024E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 				DB13DDD22679047100B0C246 /* Extensions */,
 				DB6FD29B267A9EAA00361838 /* Constants.swift */,
 				DB6FD2A5267A9F6E00361838 /* Configuration.swift */,
+				DBE68A08267BE67900F4024E /* Coordinator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				DB13DE8126790BC600B0C246 /* StoryListEntity.swift in Sources */,
 				DB13DE3926790B2500B0C246 /* SeriesListDTO.swift in Sources */,
 				DBE689EA267B4FA600F4024E /* MarvelListCoordinator.swift in Sources */,
+				DBE68A09267BE67900F4024E /* Coordinator.swift in Sources */,
 				DB13DE7626790BC600B0C246 /* StorySummaryEntity.swift in Sources */,
 				DB13DE0326790AAD00B0C246 /* CharacterDataContainerDTO.swift in Sources */,
 				DB13DE3426790B1B00B0C246 /* EventSummaryDTO.swift in Sources */,

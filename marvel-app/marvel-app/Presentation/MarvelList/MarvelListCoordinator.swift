@@ -6,3 +6,28 @@
 //
 
 import Foundation
+import UIKit
+
+class MarvelListCoordinator: Coordinator {
+    var childCoordinators = [Coordinator]()
+    var navigationController: UINavigationController
+
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+
+    func start() {
+        let vc = MarvelListViewController(viewModel: self.inject())
+        navigationController.pushViewController(vc, animated: false)
+    }
+}
+
+private extension MarvelListCoordinator {
+    func inject() -> MarvelListViewModelProtocol {
+        let charactersDataSource: CharactersDataSource = CharactersNetworkDataSource()
+        let charactersRepository: CharactersRepository = CharactersDataRepository(dataSource: charactersDataSource)
+        let getCharactersUseCase: GetCharactersUseCaseProtocol = GetCharactersUseCase(repository: charactersRepository)
+        return MarvelListViewModel(getCharactersUseCase: getCharactersUseCase)
+    }
+}
+ 

@@ -9,12 +9,25 @@ import UIKit
 
 class MarvelListViewController: UIViewController {
     
-    let viewModel: MarvelListViewModel = MarvelListViewModel(getCharactersUseCase: GetCharactersUseCase(repository: CharactersDataRepository(dataSource: CharactersNetworkDataSource())))
+    // MARK: - Attributes
+    
+    var viewModel: MarvelListViewModelProtocol
+    
+    // MARK: - Initializers
+    
+    init(viewModel: MarvelListViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         viewModel.getCharacters { error in
             if let error = error {
                 let a = error
@@ -23,16 +36,4 @@ class MarvelListViewController: UIViewController {
             }
         }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

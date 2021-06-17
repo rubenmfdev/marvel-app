@@ -7,7 +7,11 @@
 
 import Foundation
 
-class MarvelListViewModel {
+protocol MarvelListViewModelProtocol {
+    func getCharacters(completion: @escaping (String?) -> Void)
+}
+
+class MarvelListViewModel: MarvelListViewModelProtocol {
     
     // MARK: - Attributes
     
