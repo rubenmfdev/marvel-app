@@ -12,4 +12,9 @@ class CharactersNetworkDataSource: CharactersDataSource {
         let router = CharactersRouter(.character(filters: filters))
         NetworkManager.shared().requestObject(router, completion: completion)
     }
+    
+    func getCharactersWithId(_ characterId: Int, filters: CharacterFilterEntity, completion: @escaping (Result<CharacterDataWrapperDTO, Error>) -> Void ) {
+        let router = CharactersRouter(.characterWithId(characterId, filters: filters))
+        NetworkManager.shared().requestObject(router, completion: completion)
+    }
 }

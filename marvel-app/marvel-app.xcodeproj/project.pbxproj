@@ -44,6 +44,11 @@
 		DB3B63EB267DFF310077F8DC /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B63EA267DFF310077F8DC /* CustomUIView.swift */; };
 		DB3B63F0267E07C80077F8DC /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B63EF267E07C80077F8DC /* CustomUIImageView.swift */; };
 		DB3B63F5267E0ADA0077F8DC /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B63F4267E0ADA0077F8DC /* UIViewController+Alert.swift */; };
+		DB3B63FD267E1A0A0077F8DC /* GetCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B63FC267E1A0A0077F8DC /* GetCharacterUseCase.swift */; };
+		DB3B6403267E1B1A0077F8DC /* MarvelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B6401267E1B1A0077F8DC /* MarvelDetailViewController.swift */; };
+		DB3B6404267E1B1A0077F8DC /* MarvelDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3B6402267E1B1A0077F8DC /* MarvelDetailViewController.xib */; };
+		DB3B6409267E1B2B0077F8DC /* MarvelDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B6408267E1B2B0077F8DC /* MarvelDetailCoordinator.swift */; };
+		DB3B640E267E1B370077F8DC /* MarvelDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B640D267E1B370077F8DC /* MarvelDetailViewModel.swift */; };
 		DB6FD269267A956E00361838 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD268267A956E00361838 /* BaseRouter.swift */; };
 		DB6FD272267A95AE00361838 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD271267A95AE00361838 /* HTTPStatusCode.swift */; };
 		DB6FD27A267A967300361838 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD279267A967300361838 /* NetworkManager.swift */; };
@@ -53,7 +58,6 @@
 		DB6FD2A1267A9EF100361838 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB6FD2A0267A9EF100361838 /* Config.plist */; };
 		DB6FD2A6267A9F6E00361838 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD2A5267A9F6E00361838 /* Configuration.swift */; };
 		DB6FD2AB267AA13700361838 /* CharactersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FD2AA267AA13700361838 /* CharactersDataSource.swift */; };
-		DBCC9081267D1C2300A3CFD1 /* UIImageView+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC9080267D1C2300A3CFD1 /* UIImageView+Alamofire.swift */; };
 		DBCC909C267D250400A3CFD1 /* ImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC909B267D250400A3CFD1 /* ImageRouter.swift */; };
 		DBCF61B7267D0F42002FD88C /* MarvelListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCF61B5267D0F42002FD88C /* MarvelListTableViewCell.swift */; };
 		DBCF61B8267D0F42002FD88C /* MarvelListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCF61B6267D0F42002FD88C /* MarvelListTableViewCell.xib */; };
@@ -141,6 +145,11 @@
 		DB3B63EA267DFF310077F8DC /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		DB3B63EF267E07C80077F8DC /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
 		DB3B63F4267E0ADA0077F8DC /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		DB3B63FC267E1A0A0077F8DC /* GetCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterUseCase.swift; sourceTree = "<group>"; };
+		DB3B6401267E1B1A0077F8DC /* MarvelDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDetailViewController.swift; sourceTree = "<group>"; };
+		DB3B6402267E1B1A0077F8DC /* MarvelDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarvelDetailViewController.xib; sourceTree = "<group>"; };
+		DB3B6408267E1B2B0077F8DC /* MarvelDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDetailCoordinator.swift; sourceTree = "<group>"; };
+		DB3B640D267E1B370077F8DC /* MarvelDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDetailViewModel.swift; sourceTree = "<group>"; };
 		DB6FD268267A956E00361838 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		DB6FD271267A95AE00361838 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		DB6FD279267A967300361838 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -150,7 +159,6 @@
 		DB6FD2A0267A9EF100361838 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		DB6FD2A5267A9F6E00361838 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DB6FD2AA267AA13700361838 /* CharactersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataSource.swift; sourceTree = "<group>"; };
-		DBCC9080267D1C2300A3CFD1 /* UIImageView+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Alamofire.swift"; sourceTree = "<group>"; };
 		DBCC909B267D250400A3CFD1 /* ImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRouter.swift; sourceTree = "<group>"; };
 		DBCF61B5267D0F42002FD88C /* MarvelListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelListTableViewCell.swift; sourceTree = "<group>"; };
 		DBCF61B6267D0F42002FD88C /* MarvelListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarvelListTableViewCell.xib; sourceTree = "<group>"; };
@@ -435,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				DBE689D8267B2BF300F4024E /* GetCharactersUseCase.swift */,
+				DB3B63FC267E1A0A0077F8DC /* GetCharacterUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -454,6 +463,10 @@
 		DB13DDD12679045700B0C246 /* MarvelDetail */ = {
 			isa = PBXGroup;
 			children = (
+				DB3B6401267E1B1A0077F8DC /* MarvelDetailViewController.swift */,
+				DB3B6402267E1B1A0077F8DC /* MarvelDetailViewController.xib */,
+				DB3B640D267E1B370077F8DC /* MarvelDetailViewModel.swift */,
+				DB3B6408267E1B2B0077F8DC /* MarvelDetailCoordinator.swift */,
 			);
 			path = MarvelDetail;
 			sourceTree = "<group>";
@@ -465,7 +478,6 @@
 				DBE689F6267B60E300F4024E /* String+Crypto.swift */,
 				DBE689FB267B658000F4024E /* String+Json.swift */,
 				DBE68A00267B6C3B00F4024E /* String+Localizable.swift */,
-				DBCC9080267D1C2300A3CFD1 /* UIImageView+Alamofire.swift */,
 				DB3B63F4267E0ADA0077F8DC /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
@@ -627,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBCF61B8267D0F42002FD88C /* MarvelListTableViewCell.xib in Resources */,
+				DB3B6404267E1B1A0077F8DC /* MarvelDetailViewController.xib in Resources */,
 				DB6FD2A1267A9EF100361838 /* Config.plist in Resources */,
 				DB13DD8C2679003F00B0C246 /* LaunchScreen.storyboard in Resources */,
 				DBE689E0267B4F8800F4024E /* MarvelListViewController.xib in Resources */,
@@ -718,6 +731,7 @@
 				DB13DE7926790BC600B0C246 /* CharacterEntity.swift in Sources */,
 				DBE689EF267B54D200F4024E /* Dictionary.swift in Sources */,
 				DB13DDFE26790A9F00B0C246 /* CharacterDataWrapperDTO.swift in Sources */,
+				DB3B6403267E1B1A0077F8DC /* MarvelDetailViewController.swift in Sources */,
 				DB13DE8026790BC600B0C246 /* UrlEntity.swift in Sources */,
 				DBE689DF267B4F8800F4024E /* MarvelListViewController.swift in Sources */,
 				DB13DE7C26790BC600B0C246 /* EventSummaryEntity.swift in Sources */,
@@ -736,7 +750,7 @@
 				DB6FD29C267A9EAA00361838 /* Constants.swift in Sources */,
 				DB6FD2AB267AA13700361838 /* CharactersDataSource.swift in Sources */,
 				DBE689F7267B60E300F4024E /* String+Crypto.swift in Sources */,
-				DBCC9081267D1C2300A3CFD1 /* UIImageView+Alamofire.swift in Sources */,
+				DB3B6409267E1B2B0077F8DC /* MarvelDetailCoordinator.swift in Sources */,
 				DB13DD822679003D00B0C246 /* SceneDelegate.swift in Sources */,
 				DB6FD297267A9CA100361838 /* CharactersRouter.swift in Sources */,
 				DB3B63F0267E07C80077F8DC /* CustomUIImageView.swift in Sources */,
@@ -749,9 +763,11 @@
 				DBE689EA267B4FA600F4024E /* MarvelListCoordinator.swift in Sources */,
 				DBE68A09267BE67900F4024E /* Coordinator.swift in Sources */,
 				DB13DE7626790BC600B0C246 /* StorySummaryEntity.swift in Sources */,
+				DB3B63FD267E1A0A0077F8DC /* GetCharacterUseCase.swift in Sources */,
 				DB13DE0326790AAD00B0C246 /* CharacterDataContainerDTO.swift in Sources */,
 				DB13DE3426790B1B00B0C246 /* EventSummaryDTO.swift in Sources */,
 				DBE689CB267B2AA100F4024E /* DomainError.swift in Sources */,
+				DB3B640E267E1B370077F8DC /* MarvelDetailViewModel.swift in Sources */,
 				DB3B63F5267E0ADA0077F8DC /* UIViewController+Alert.swift in Sources */,
 				DBE689FC267B658000F4024E /* String+Json.swift in Sources */,
 				DBE689BC267B25E100F4024E /* CharacterFilterEntity.swift in Sources */,

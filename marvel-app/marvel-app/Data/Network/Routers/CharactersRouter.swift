@@ -10,11 +10,11 @@ import Alamofire
 
 enum CharactersEndpoint {
     case character(filters: CharacterFilterEntity)
-    case characterWithId(_ id: String, filters: CharacterFilterEntity)
-    case characterComics(_ id: String, filters: CharacterFilterEntity)
-    case characterEvents(_ id: String, filters: CharacterFilterEntity)
-    case characterSeries(_ id: String, filters: CharacterFilterEntity)
-    case characterStories(_ id: String, filters: CharacterFilterEntity)
+    case characterWithId(_ characterId: Int, filters: CharacterFilterEntity)
+    case characterComics(_ characterId: Int, filters: CharacterFilterEntity)
+    case characterEvents(_ characterId: Int, filters: CharacterFilterEntity)
+    case characterSeries(_ characterId: Int, filters: CharacterFilterEntity)
+    case characterStories(_ characterId: Int, filters: CharacterFilterEntity)
 }
 
 class CharactersRouter: BaseRouter {
@@ -44,16 +44,16 @@ class CharactersRouter: BaseRouter {
         switch self.endpoint {
         case .character:
             return ""
-        case let .characterWithId(id, _):
-            return "\(id)"
-        case let .characterComics(id, _):
-            return "\(id)/comics"
-        case let .characterEvents(id, _):
-            return "\(id)/events"
-        case let .characterSeries(id, _):
-            return "\(id)/series"
-        case let .characterStories(id, _):
-            return "\(id)/stories"
+        case let .characterWithId(characterId, _):
+            return "\(characterId)"
+        case let .characterComics(characterId, _):
+            return "\(characterId)/comics"
+        case let .characterEvents(characterId, _):
+            return "\(characterId)/events"
+        case let .characterSeries(characterId, _):
+            return "\(characterId)/series"
+        case let .characterStories(characterId, _):
+            return "\(characterId)/stories"
         }
     }
     

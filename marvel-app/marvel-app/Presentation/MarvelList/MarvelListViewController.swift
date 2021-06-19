@@ -8,6 +8,10 @@
 import UIKit
 import SVProgressHUD
 
+protocol MarvelListViewControllerDelegate {
+    func characterSelected(characterId: Int)
+}
+
 class MarvelListViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -17,11 +21,13 @@ class MarvelListViewController: UIViewController {
     // MARK: - Attributes
     
     var viewModel: MarvelListViewModelProtocol
+    var delegate: MarvelListViewControllerDelegate?
     
     // MARK: - Initializers
     
-    init(viewModel: MarvelListViewModelProtocol) {
+    init(viewModel: MarvelListViewModelProtocol, delegate: MarvelListViewControllerDelegate?) {
         self.viewModel = viewModel
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,6 +40,11 @@ class MarvelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "marvelList_title".localize
     }
 }
 
@@ -91,4 +102,10 @@ extension MarvelListViewController: UITableViewDataSource {
 
 extension MarvelListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let character = self.viewModel.getCharacters()[indexPath.row]
+        if let characterId = character.id {
+            self.delegate?.characterSelected(characterId:characterId)
+        }
+    }
 }

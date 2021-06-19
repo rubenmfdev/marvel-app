@@ -17,9 +17,8 @@ class MarvelListCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = MarvelListViewController(viewModel: self.inject())
-        navigationController.setNavigationBarHidden(true, animated: true)
-        navigationController.pushViewController(vc, animated: false)
+        let vc = MarvelListViewController(viewModel: self.inject(), delegate: self)
+        self.navigationController.pushViewController(vc, animated: false)
     }
 }
 
@@ -29,6 +28,13 @@ private extension MarvelListCoordinator {
         let charactersRepository: CharactersRepository = CharactersDataRepository(dataSource: charactersDataSource)
         let getCharactersUseCase: GetCharactersUseCaseProtocol = GetCharactersUseCase(repository: charactersRepository)
         return MarvelListViewModel(getCharactersUseCase: getCharactersUseCase)
+    }
+}
+
+extension MarvelListCoordinator: MarvelListViewControllerDelegate {
+    func characterSelected(characterId: Int) {
+        let detailCoordinator = MarvelDetailCoordinator(navigationController: self.navigationController, characterId: characterId)
+        detailCoordinator.start()
     }
 }
  

@@ -34,7 +34,7 @@ class MarvelListViewModel: MarvelListViewModelProtocol {
     // MARK: - MarvelListViewModelProtocol
     
     func loadCharacters(completion: @escaping (String?) -> Void) {
-        self.getCharactersUseCase.execute(input: self.filter) { [unowned self] result in
+        self.getCharactersUseCase.execute(input: GetCharactersUseCaseInput(filters: self.filter)) { [unowned self] result in
             switch result {
             case let .success(value):
                 if let count = value.data?.count, let results = value.data?.results {

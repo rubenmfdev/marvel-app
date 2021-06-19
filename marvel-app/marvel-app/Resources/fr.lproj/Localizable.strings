@@ -5,3 +5,15 @@
 */
 
 // MARK: - General
+
+"error" = "Error";
+"ok" = "OK";
+
+// MARK: - MarvelList
+
+"marvelList_title" = "Lista de héroes";
+
+// MARK: - MarvelDetail
+
+"marvelDetail_title" = "Detalle";
+"marvelDetail_descriptionLabel_default" = "No se ha encontrado descripción";
