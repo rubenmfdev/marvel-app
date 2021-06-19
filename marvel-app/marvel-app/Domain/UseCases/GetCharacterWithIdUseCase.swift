@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol GetCharacterWithIdUseCaseProtocol {
+public protocol GetCharacterWithIdUseCaseProtocol {
     func execute(input: GetCharacterWithIdUseCaseInput, completion: @escaping (Result<CharacterDataWrapperEntity, Error>) -> Void)
 }
 
@@ -30,7 +30,7 @@ class GetCharacterWithIdUseCase: GetCharacterWithIdUseCaseProtocol {
     }
 }
 
-struct GetCharacterWithIdUseCaseInput {
+public struct GetCharacterWithIdUseCaseInput {
     let characterId: Int
     let filters: CharacterFilterEntity
 }

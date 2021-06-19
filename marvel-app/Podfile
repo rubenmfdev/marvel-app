@@ -3,14 +3,22 @@ platform :ios, 13.2
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'marvel-app' do
-
-  use_frameworks!
-  inhibit_all_warnings!
- 
+def common_pods
   pod 'AlamofireImage', '~> 3.6.0'
   pod 'AlamofireObjectMapper', '~> 5.2.1'
   pod 'Localize-Swift', '~> 3.1.0'
   pod 'IQKeyboardManagerSwift', '~> 6.5'
   pod 'SVProgressHUD', '2.2.5'
+end 
+
+target 'marvel-app' do
+  use_frameworks!
+  inhibit_all_warnings!
+  common_pods
+end
+
+target 'marvel-appTests' do 
+  use_frameworks!
+  inhibit_all_warnings!
+  common_pods
 end
