@@ -8,7 +8,11 @@
 import Foundation
 
 protocol MarvelListViewModelProtocol {
-    func getCharacters(completion: @escaping (String?) -> Void)
+    func loadCharacters(completion: @escaping (String?) -> Void)
+    func getCharacters() -> [CharacterEntity]
+    func setIsLoadingData(loadingData: Bool)
+    func getIsLoadingData() -> Bool
+    func getHasMoreData() -> Bool
 }
 
 class MarvelListViewModel: MarvelListViewModelProtocol {
@@ -18,6 +22,8 @@ class MarvelListViewModel: MarvelListViewModelProtocol {
     var characters: [CharacterEntity] = []
     var getCharactersUseCase: GetCharactersUseCaseProtocol
     var filter: CharacterFilterEntity = CharacterFilterEntity()
+    var isLoadingData: Bool = false
+    var hasMoreData: Bool = true
     
     // MARK: - Initializer
     
@@ -25,15 +31,16 @@ class MarvelListViewModel: MarvelListViewModelProtocol {
         self.getCharactersUseCase = getCharactersUseCase
     }
     
-    // MARK: - Publi methods
+    // MARK: - MarvelListViewModelProtocol
     
-    func getCharacters(completion: @escaping (String?) -> Void) {
-        self.getCharactersUseCase.execute(input: self.filter) { result in
+    func loadCharacters(completion: @escaping (String?) -> Void) {
+        self.getCharactersUseCase.execute(input: self.filter) { [unowned self] result in
             switch result {
             case let .success(value):
                 if let count = value.data?.count, let results = value.data?.results {
                     self.filter.offset = (self.filter.offset ?? 0) + count
-                    self.characters = results
+                    self.characters.append(contentsOf: results)
+                    self.hasMoreData = results.count > 0
                     completion(nil)
                 } else {
                     completion(DomainError.dataError.localizedDescription)
@@ -43,4 +50,20 @@ class MarvelListViewModel: MarvelListViewModelProtocol {
             }
         }
     }
+    
+    func getCharacters() -> [CharacterEntity] {
+        return self.characters
+    }
+    
+    func setIsLoadingData(loadingData: Bool) {
+        self.isLoadingData = loadingData
+    }
+    func getIsLoadingData() -> Bool {
+        self.isLoadingData
+    }
+    
+    func getHasMoreData() -> Bool {
+        self.hasMoreData
+    }
+    
 }

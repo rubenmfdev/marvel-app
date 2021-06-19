@@ -9,7 +9,7 @@ import Foundation
 
 class CharactersNetworkDataSource: CharactersDataSource {
     func getCharacters(filters: CharacterFilterEntity, completion: @escaping (Result<CharacterDataWrapperDTO, Error>) -> Void ) {
-        let router = CharactersRouter(.character)
+        let router = CharactersRouter(.character(filters: filters))
         NetworkManager.shared().requestObject(router, completion: completion)
     }
 }

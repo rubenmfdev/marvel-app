@@ -10,6 +10,7 @@ struct Constants {
         struct Controller {
         }
         struct Cells {
+            static let MarvelList               = "MarvelListTableViewCell"
         }
     }
     struct API {

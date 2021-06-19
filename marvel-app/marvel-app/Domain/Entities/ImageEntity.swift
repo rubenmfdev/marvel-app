@@ -17,7 +17,7 @@ public class ImageEntity: NSObject, Mappable {
     }
     
     public func mapping(map: Map) {
-        path                        <- map["available"]
+        path                        <- map["path"]
         imageExtension              <- map["extension"]
     }
 }

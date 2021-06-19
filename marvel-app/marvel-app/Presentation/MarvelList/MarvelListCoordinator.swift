@@ -18,6 +18,7 @@ class MarvelListCoordinator: Coordinator {
 
     func start() {
         let vc = MarvelListViewController(viewModel: self.inject())
+        navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.pushViewController(vc, animated: false)
     }
 }
