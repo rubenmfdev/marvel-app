@@ -21,20 +21,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hO-3q-fnT">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nfE-0j-Xdi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="41L-Nf-MtB"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="We3-dZ-a85"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
+                <constraint firstItem="nfE-0j-Xdi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cef-hV-fZB"/>
+                <constraint firstItem="2hO-3q-fnT" firstAttribute="top" secondItem="nfE-0j-Xdi" secondAttribute="bottom" id="FIt-YA-kNB"/>
                 <constraint firstItem="2hO-3q-fnT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GZR-OZ-x2k"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2hO-3q-fnT" secondAttribute="bottom" id="ROO-fa-1RP"/>
-                <constraint firstItem="2hO-3q-fnT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iCS-cO-v52"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2hO-3q-fnT" secondAttribute="trailing" id="jya-Sr-vSP"/>
+                <constraint firstItem="nfE-0j-Xdi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nSB-VR-1Wc"/>
+                <constraint firstItem="nfE-0j-Xdi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="o4v-ZF-5Ov"/>
             </constraints>
             <point key="canvasLocation" x="138" y="82"/>
         </view>

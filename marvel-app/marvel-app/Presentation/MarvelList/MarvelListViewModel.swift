@@ -13,6 +13,7 @@ protocol MarvelListViewModelProtocol {
     func setIsLoadingData(loadingData: Bool)
     func getIsLoadingData() -> Bool
     func getHasMoreData() -> Bool
+    func addSearchText(searchText: String)
 }
 
 class MarvelListViewModel: MarvelListViewModelProtocol {
@@ -66,4 +67,13 @@ class MarvelListViewModel: MarvelListViewModelProtocol {
         self.hasMoreData
     }
     
+    func addSearchText(searchText: String) {
+        if searchText == "" {
+            self.filter.nameStartsWith = nil
+        } else {
+            self.filter.nameStartsWith = searchText
+        }
+        self.characters = []
+        self.filter.offset = 0
+    }
 }

@@ -17,11 +17,12 @@ class MarvelListViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
-    
+
     // MARK: - Attributes
     
     var viewModel: MarvelListViewModelProtocol
     var delegate: MarvelListViewControllerDelegate?
+    var skeletonWasShown = false
     
     // MARK: - Initializers
     
@@ -49,7 +50,10 @@ class MarvelListViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.tableView.showAnimatedGradientSkeleton()
+        if !self.skeletonWasShown {
+            self.tableView.showAnimatedGradientSkeleton()
+            self.skeletonWasShown = true
+        }
     }
 }
 
@@ -86,6 +90,14 @@ private extension MarvelListViewController {
     
     func addAccessibilityIds() {
         self.tableView.accessibilityLabel = Constants.Accessibility.MarvelList.tableView
+    }
+    
+    @objc func updateSearch(searchText: Any) {
+        if let searchText = searchText as? String {
+            self.viewModel.addSearchText(searchText: searchText)
+            self.viewModel.setIsLoadingData(loadingData: true)
+            self.loadData()
+        }
     }
 }
 
@@ -124,5 +136,12 @@ extension MarvelListViewController: UITableViewDelegate {
         if let characterId = character.id {
             self.delegate?.characterSelected(characterId:characterId)
         }
+    }
+}
+
+extension MarvelListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+        self.perform(#selector(updateSearch), with: searchText, afterDelay: 0.5)
     }
 }
