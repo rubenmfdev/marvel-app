@@ -9,6 +9,11 @@
 "error" = "Error";
 "ok" = "OK";
 
+// MARK: - Errors
+
+"noDataError" = "No hay datos disponibles";
+"domainMappingError" = "Error de datos";
+
 // MARK: - MarvelList
 
 "marvelList_title" = "Lista de héroes";
