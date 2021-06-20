@@ -53,6 +53,7 @@ private extension MarvelDetailViewController {
         self.navigationController?.navigationBar.backItem?.title = ""
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.loadData()
+        self.addAccessibilityIds()
     }
     
 
@@ -79,5 +80,11 @@ private extension MarvelDetailViewController {
         let urlString = "\(character.thumbnail?.path ?? "").\(character.thumbnail?.imageExtension ?? "")"
         let router = ImageRouter(url: urlString)
         self.characterImage.af_setImage(withURLRequest: router)
+    }
+    
+    func addAccessibilityIds() {
+        self.characterImage.accessibilityLabel = Constants.Accessibility.MarvelDetail.image
+        self.nameLabel.accessibilityLabel = Constants.Accessibility.MarvelDetail.title
+        self.descriptionLabel.accessibilityLabel = Constants.Accessibility.MarvelDetail.description
     }
 }

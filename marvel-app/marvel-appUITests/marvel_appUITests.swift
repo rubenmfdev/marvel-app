@@ -26,6 +26,11 @@ class marvel_appUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        app.tables["marvelList_tableView"].children(matching: .cell).matching(identifier: "marvelList_tableViewCell").element(boundBy: 0).staticTexts["marvelList_cellLabel"].tap()
+        app.staticTexts["marvelDetail_title"].tap()
+        app.staticTexts["marvelDetail_description"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

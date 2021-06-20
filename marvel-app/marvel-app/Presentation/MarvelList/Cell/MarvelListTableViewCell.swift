@@ -28,11 +28,20 @@ class MarvelListTableViewCell: UITableViewCell {
         self.characterImage.af_setImage(withURLRequest: router, completion:  { _ in
             self.characterImage.hideSkeleton()
         })
+        self.addAccessibilityIds()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         self.characterImage.image = nil
         self.characterImage.showAnimatedGradientSkeleton()
+    }
+}
+
+private extension MarvelListTableViewCell {
+    func addAccessibilityIds() {
+        self.accessibilityLabel = Constants.Accessibility.MarvelList.tableViewCell
+        self.characterImage.accessibilityLabel = Constants.Accessibility.MarvelList.cellImage
+        self.nameLabel.accessibilityLabel = Constants.Accessibility.MarvelList.cellLabel
     }
 }

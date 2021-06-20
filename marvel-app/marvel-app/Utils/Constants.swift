@@ -20,5 +20,18 @@ struct Constants {
         struct Credential {
         }
     }
+    struct Accessibility {
+        struct MarvelList {
+            static let tableView                = "marvelList_tableView"
+            static let tableViewCell            = "marvelList_tableViewCell"
+            static let cellImage                = "marvelList_cellImage"
+            static let cellLabel                = "marvelList_cellLabel"
+        }
+        struct MarvelDetail {
+            static let image                    = "marvelDetail_image"
+            static let title                    = "marvelDetail_title"
+            static let description              = "marvelDetail_description"
+        }
+    }
 }
 

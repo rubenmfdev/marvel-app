@@ -60,6 +60,7 @@ private extension MarvelListViewController {
         self.tableView.estimatedRowHeight = 120.0
         self.registerCells()
         self.loadData()
+        self.addAccessibilityIds()
     }
     
     func registerCells() {
@@ -81,6 +82,10 @@ private extension MarvelListViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func addAccessibilityIds() {
+        self.tableView.accessibilityLabel = Constants.Accessibility.MarvelList.tableView
     }
 }
 
