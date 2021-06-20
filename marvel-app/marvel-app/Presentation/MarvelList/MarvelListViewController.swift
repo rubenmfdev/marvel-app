@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SkeletonView
 
 protocol MarvelListViewControllerDelegate {
     func characterSelected(characterId: Int)
@@ -46,12 +46,18 @@ class MarvelListViewController: UIViewController {
         super.viewWillAppear(animated)
         self.title = "marvelList_title".localize
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.tableView.showAnimatedGradientSkeleton()
+    }
 }
 
 private extension MarvelListViewController {
     func setup() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.estimatedRowHeight = 120.0
         self.registerCells()
         self.loadData()
     }
@@ -66,9 +72,8 @@ private extension MarvelListViewController {
     }
     
     func loadData() {
-        SVProgressHUD.show()
         viewModel.loadCharacters { error in
-            SVProgressHUD.dismiss()
+            self.tableView.hideSkeleton()
             self.viewModel.setIsLoadingData(loadingData: false)
             if let errorMessage = error {
                 self.alert(message: errorMessage)
@@ -79,7 +84,15 @@ private extension MarvelListViewController {
     }
 }
 
-extension MarvelListViewController: UITableViewDataSource {
+extension MarvelListViewController: SkeletonTableViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        20
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return Constants.Content.Cells.MarvelList
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.viewModel.getCharacters().count
     }
@@ -92,7 +105,7 @@ extension MarvelListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let lastElement = self.viewModel.getCharacters().count - 1
+        let lastElement = self.viewModel.getCharacters().count - 5
         if !self.viewModel.getIsLoadingData() && indexPath.row == lastElement && self.viewModel.getHasMoreData() {
             self.viewModel.setIsLoadingData(loadingData: true)
             loadData()
@@ -101,7 +114,6 @@ extension MarvelListViewController: UITableViewDataSource {
 }
 
 extension MarvelListViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let character = self.viewModel.getCharacters()[indexPath.row]
         if let characterId = character.id {

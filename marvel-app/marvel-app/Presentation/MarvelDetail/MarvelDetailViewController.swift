@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SkeletonView
 
 class MarvelDetailViewController: UIViewController {
     
@@ -35,6 +35,7 @@ class MarvelDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.showAnimatedGradientSkeleton()
         self.setup()
     }
     
@@ -56,9 +57,8 @@ private extension MarvelDetailViewController {
     
 
     func loadData() {
-        SVProgressHUD.show()
         self.viewModel.loadCharacter { [unowned self] (error, character) in
-            SVProgressHUD.dismiss()
+            self.view.hideSkeleton()
             if let errorMessage = error {
                 self.alert(message: errorMessage)
             } else if let character = character {

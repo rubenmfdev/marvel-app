@@ -25,11 +25,14 @@ class MarvelListTableViewCell: UITableViewCell {
         self.nameLabel.text = character.name
         let urlString = "\(character.thumbnail?.path ?? "").\(character.thumbnail?.imageExtension ?? "")"
         let router = ImageRouter(url: urlString)
-        self.characterImage.af_setImage(withURLRequest: router)
+        self.characterImage.af_setImage(withURLRequest: router, completion:  { _ in
+            self.characterImage.hideSkeleton()
+        })
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         self.characterImage.image = nil
+        self.characterImage.showAnimatedGradientSkeleton()
     }
 }

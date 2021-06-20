@@ -8,14 +8,14 @@ PODS:
   - IQKeyboardManagerSwift (6.5.6)
   - Localize-Swift (3.1.0)
   - ObjectMapper (3.5.3)
-  - SVProgressHUD (2.2.5)
+  - SkeletonView (1.17.2)
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.6.0)
   - AlamofireObjectMapper (~> 5.2.1)
   - IQKeyboardManagerSwift (~> 6.5)
   - Localize-Swift (~> 3.1.0)
-  - SVProgressHUD (= 2.2.5)
+  - SkeletonView (~> 1.17.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -25,7 +25,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Localize-Swift
     - ObjectMapper
-    - SVProgressHUD
+    - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -34,8 +34,8 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SkeletonView: 7aba21d10df8d0530189379ebe02e02a192d8132
 
-PODFILE CHECKSUM: b443b876942d2e0e2ac2e7249d123d034fd299ca
+PODFILE CHECKSUM: 8f855ccc001c5eea934e4ab615926dd553db640d
 
 COCOAPODS: 1.10.0
