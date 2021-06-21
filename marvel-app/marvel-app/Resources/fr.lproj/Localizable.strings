@@ -1,0 +1,24 @@
+/*
+  Localizable.strings
+  marvel-app
+  Created by Ruben Marquez on 15/06/2021.
+*/
+
+// MARK: - General
+
+"error" = "Error";
+"ok" = "OK";
+
+// MARK: - Errors
+
+"noDataError" = "No hay datos disponibles";
+"domainMappingError" = "Error de datos";
+
+// MARK: - MarvelList
+
+"marvelList_title" = "Lista de héroes";
+
+// MARK: - MarvelDetail
+
+"marvelDetail_title" = "Detalle";
+"marvelDetail_descriptionLabel_default" = "No se ha encontrado descripción";

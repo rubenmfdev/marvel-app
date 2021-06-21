@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarvelDetailViewController" customModule="marvel_app" customModuleProvider="target">
+            <connections>
+                <outlet property="characterImage" destination="jrC-3u-u4Y" id="IJN-Xy-7UZ"/>
+                <outlet property="descriptionLabel" destination="i2i-aS-VAE" id="hhS-Nh-Kc0"/>
+                <outlet property="nameLabel" destination="Ps8-Rc-kDq" id="iv4-yz-o6K"/>
+                <outlet property="view" destination="ep5-4b-qKo" id="5C6-d2-dAQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ep5-4b-qKo" userLabel="View" customClass="CustomUIView" customModule="marvel_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jrC-3u-u4Y" customClass="CustomUIImageView" customModule="marvel_app" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="wA7-zu-FXd"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="i2i-aS-VAE">
+                    <rect key="frame" x="20" y="384" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ps8-Rc-kDq">
+                    <rect key="frame" x="20" y="364" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="enw-9V-AQG"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="i2i-aS-VAE" firstAttribute="leading" secondItem="enw-9V-AQG" secondAttribute="leading" constant="20" id="3vQ-dG-V07"/>
+                <constraint firstItem="enw-9V-AQG" firstAttribute="trailing" secondItem="i2i-aS-VAE" secondAttribute="trailing" constant="20" id="6B1-hZ-9fX"/>
+                <constraint firstItem="jrC-3u-u4Y" firstAttribute="top" secondItem="enw-9V-AQG" secondAttribute="top" id="73B-A2-Wv1"/>
+                <constraint firstItem="Ps8-Rc-kDq" firstAttribute="leading" secondItem="enw-9V-AQG" secondAttribute="leading" constant="20" id="B8u-Na-dBV"/>
+                <constraint firstItem="Ps8-Rc-kDq" firstAttribute="top" secondItem="jrC-3u-u4Y" secondAttribute="bottom" constant="20" id="Baq-G6-QqH"/>
+                <constraint firstItem="enw-9V-AQG" firstAttribute="trailing" secondItem="Ps8-Rc-kDq" secondAttribute="trailing" constant="20" id="ICB-y1-fkh"/>
+                <constraint firstItem="jrC-3u-u4Y" firstAttribute="leading" secondItem="enw-9V-AQG" secondAttribute="leading" id="hCc-na-m5J"/>
+                <constraint firstItem="enw-9V-AQG" firstAttribute="trailing" secondItem="jrC-3u-u4Y" secondAttribute="trailing" id="oIh-Am-yEx"/>
+                <constraint firstItem="i2i-aS-VAE" firstAttribute="top" secondItem="Ps8-Rc-kDq" secondAttribute="bottom" constant="20" id="rpW-EC-5Rh"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-1903" y="66"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarvelListTableViewCell" rowHeight="120" id="KGk-i7-Jjw" customClass="MarvelListTableViewCell" customModule="marvel_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="425" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exB-9g-KdO" userLabel="CardView" customClass="CustomUIView" customModule="marvel_app" customModuleProvider="target">
+                        <rect key="frame" x="12" y="12" width="401" height="90"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hlq-Xj-S5g" customClass="CustomUIImageView" customModule="marvel_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="gQV-Lm-ncx"/>
+                                    <constraint firstAttribute="height" constant="90" id="jgL-57-4Bs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ironman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-3P-JlK">
+                                <rect key="frame" x="102" y="32" width="297" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hlq-Xj-S5g" firstAttribute="top" secondItem="exB-9g-KdO" secondAttribute="top" id="0MJ-ln-8Kp"/>
+                            <constraint firstAttribute="trailing" secondItem="MDs-3P-JlK" secondAttribute="trailing" constant="2" id="CBc-pm-YOK"/>
+                            <constraint firstItem="MDs-3P-JlK" firstAttribute="centerY" secondItem="exB-9g-KdO" secondAttribute="centerY" id="SN4-WX-CNI"/>
+                            <constraint firstItem="MDs-3P-JlK" firstAttribute="leading" secondItem="hlq-Xj-S5g" secondAttribute="trailing" constant="12" id="Sh9-XD-TaX"/>
+                            <constraint firstItem="hlq-Xj-S5g" firstAttribute="leading" secondItem="exB-9g-KdO" secondAttribute="leading" id="Vvc-l6-TVh"/>
+                            <constraint firstItem="hlq-Xj-S5g" firstAttribute="centerY" secondItem="exB-9g-KdO" secondAttribute="centerY" id="tvw-WV-608"/>
+                            <constraint firstAttribute="bottom" secondItem="hlq-Xj-S5g" secondAttribute="bottom" id="yKJ-Vj-Ytt"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" systemColor="opaqueSeparatorColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="exB-9g-KdO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="JET-R2-JKN"/>
+                    <constraint firstAttribute="bottom" secondItem="exB-9g-KdO" secondAttribute="bottom" constant="12" id="QuS-Df-isI"/>
+                    <constraint firstItem="exB-9g-KdO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="WNK-UN-KiQ"/>
+                    <constraint firstAttribute="trailing" secondItem="exB-9g-KdO" secondAttribute="trailing" constant="12" id="gU0-LQ-BTU"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="characterImage" destination="hlq-Xj-S5g" id="0h3-wu-pAI"/>
+                <outlet property="nameLabel" destination="MDs-3P-JlK" id="5zy-kr-4sY"/>
+            </connections>
+            <point key="canvasLocation" x="206.52173913043481" y="62.611607142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
