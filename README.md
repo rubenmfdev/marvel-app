@@ -1,7 +1,7 @@
 # marvel-app
 
-En el presente documento se pretende definir la estructura que sigue el proyecto asi como la arquitectura y patrones de diseño implementados en él.
-Asimismo, se pretende explicar que librerias se utilizan y porque, además de explicar futuras vias de desarrollo para el proyecto.
+En el presente documento se pretende definir la estructura que sigue el proyecto así como la arquitectura y patrones de diseño implementados en él.
+Asimismo, se pretende explicar que librerías se utilizan y porque, además de explicar futuras vías de desarrollo para el proyecto.
 
 ## Estructura del proyecto
 
@@ -11,11 +11,11 @@ En el proyecto se implementan dos funcionalidades principalmente, listar los sup
 
 ### SOLID
 
-La arquitectura principal se basa en los principios sólid y es una adaptación propia, parecida a VIPER. El proyecto se divide en 3 carpetas principalmente: presentation, data y domain. 
+La arquitectura principal se basa en los principios solid y es una adaptación propia, parecida a VIPER. El proyecto se divide en 3 carpetas principalmente: presentation, data y domain.
 
-En **data** se encuentran aquellos elementos que se conectan con la API o se encontrarían aquellos que se comunicarán con una DB local. En esta capa encontramos los DataSource, que son los que proveen la información, y la implementación de los Repositories que son quien envian información hasta la capa de dominio. Esta capa solo tiene dependencia con dominio.
+En **data** se encuentran aquellos elementos que se conectan con la API o se encontrarían aquellos que se comunicarán con una DB local. En esta capa encontramos los DataSource, que son los que proveen la información, y la implementación de los Repositories que son quien envían información hasta la capa de dominio. Esta capa solo tiene dependencia con dominio.
 
-En **domain** se encuentran aquellos elementos que se denominan *de capa de negocio*, necesarios para satisfacer los requerimientos del proyecto. En esta capa econtramos las interficies de los repositorios, necesarios para que sean implementados en la capa de data, los casos de uso, representando funcionalidades clave de negocio, y por último las entities, representación en forma de datos de los elementos de negocio. Esta capa no tiene dependencia con ningúna otra.
+En **domain** se encuentran aquellos elementos que se denominan *de capa de negocio*, necesarios para satisfacer los requerimientos del proyecto. En esta capa encontramos las interfaces de los repositorios, necesarios para que sean implementados en la capa de data, los casos de uso, representando funcionalidades clave de negocio, y por último las entities, representación en forma de datos de los elementos de negocio. Esta capa no tiene dependencia con ninguna otra.
 
 En **presentation** se encuentran los elementos necesarios para presentar de forma visual las funcionalidades a los usuarios. Mas adelante hablaremos sobre la arquitectura que se ha seguido para la vista. Esta capa tiene dependencia con **domain**
 
@@ -25,7 +25,7 @@ Para la parte de presentación se ha implementado el patrón MVVM. Esto se hace 
 
 ### Patrones de diseño
 
-Dado que es un proyecto pequeño y con requerimientos relativamente sencillos no se han implementado un gran número de patrones de diseño, a excepción del patron Singleton.
+Dado que es un proyecto pequeño y con requerimientos relativamente sencillos no se han implementado un gran número de patrones de diseño, a excepción del patrón Singleton.
 
 En futuros desarrollos de otras funcionalidades podrían ser implementados algunos de estos patrones: Decorator, Strategy, Facade, Factory, Builder, Compositor, etc.
 
@@ -33,7 +33,7 @@ En futuros desarrollos de otras funcionalidades podrían ser implementados algun
 
 #### Resources
 
-En esta carpeta se encuentran todas aquellas cosas que necesita el proyecto para mostrar recursos. En ella encontramos las fuentes que se utilizen en el proyecto, las imagenes, la LaunchScreen, etc.
+En esta carpeta se encuentran todas aquellas cosas que necesita el proyecto para mostrar recursos. En ella encontramos las fuentes que se utilicen en el proyecto, las imagenes, la LaunchScreen, etc.
 
 #### Config
 
@@ -43,11 +43,11 @@ En esta carpeta se encuentran los archivos de configuración del proyecto. En pr
 
 ### Alamofire
 
-Esta es una de las librerias mas utilizadas de Swift, utilizada para realizar peticiones a APIs.
+Esta es una de las librerías mas utilizadas de Swift, utilizada para realizar peticiones a APIs.
 
 ### AlamofireImage
 
-Esta es una libreria relacionada con la anterior que ofrece un componente específico para Alamofire para descargar imagenes
+Esta es una libreria relacionada con la anterior que ofrece un componente específico para Alamofire para descargar imágenes
 
 ### ObjectMapper
 
@@ -55,15 +55,15 @@ Libreria para convertir fácilmente los modelos del proyecto a JSON y viceversa.
 
 ### AlamofireObjectMapper
 
-Libreria relacionada con ObjectMapper y Alamofire para que ofrece un componente específica para Alamofire que descarga directamente los modelos del proyecto sin tener que realizar las conversiones con JSON manualmente.
+Librería relacionada con ObjectMapper y Alamofire para que ofrece un componente específica para Alamofire que descarga directamente los modelos del proyecto sin tener que realizar las conversiones con JSON manualmente.
 
 ### Localize-Swift
 
-Libreria que facilita la localización de la aplicación
+Librería que facilita la localización de la aplicación
 
 ### SkeletonView
 
-Libreria utilizada para mostrar a los usuarios que los datos estan siendo cargados sin la necesidad de mostrar *loadings* bloqueantes y de una manera elegante
+Librería utilizada para mostrar a los usuarios que los datos están siendo cargados sin la necesidad de mostrar *loadings* bloqueantes y de una manera elegante
 
 ## Futuras vias de desarrollo
 
@@ -73,7 +73,7 @@ Además de la información básica que se muestra, se podría mostrar la otra in
 
 ### Añadir filtros en la lista de superhéroes
 
-El único filtro de datos que se ha hecho en lista ha sido el del búscador, buscando los superhéroes por las primeras letras de su nombre. Se podrían añadir los otros filtros como el orden, en los comics que aparecen, cambiar búsqueda a nombres completos, etc.
+El único filtro de datos que se ha hecho en lista ha sido el del buscador, buscando los superhéroes por las primeras letras de su nombre. Se podrían añadir los otros filtros como el orden, en los cómics que aparecen, cambiar búsqueda a nombres completos, etc.
 
 ### Implementar RxSwift
 
