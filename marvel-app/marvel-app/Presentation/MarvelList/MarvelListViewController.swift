@@ -43,11 +43,6 @@ class MarvelListViewController: UIViewController {
         self.setup()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.title = "marvelList_title".localize
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if !self.skeletonWasShown {
@@ -59,6 +54,7 @@ class MarvelListViewController: UIViewController {
 
 private extension MarvelListViewController {
     func setup() {
+        self.title = "marvelList_title".localize
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.estimatedRowHeight = 120.0

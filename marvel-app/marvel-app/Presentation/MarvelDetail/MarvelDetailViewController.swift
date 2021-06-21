@@ -44,6 +44,12 @@ class MarvelDetailViewController: UIViewController {
         self.title = "marvelDetail_title".localize
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.backItem?.title = "marvelList_title".localize
+    }
+    
+    
     // MARK: - Actions
     
 }
